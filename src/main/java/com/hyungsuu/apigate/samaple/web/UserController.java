@@ -27,6 +27,8 @@ import com.hyungsuu.common.util.CommonUtil;
 import com.hyungsuu.common.util.JwtTokenUtil;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.Parameters;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -55,6 +57,9 @@ public class UserController {
      */
 
 	@Operation(summary = "회원 목록", description = "회원 목록을 조회합니다.")
+	@Parameters({
+		@Parameter(name="jwtToken", description="jwtToken", required= true),
+	})
     @ApiResponse(responseCode = "200",description = "조회 성공")
 	@RequestMapping(value="/templet/selectUser", method=RequestMethod.POST, consumes = "application/json;charset=UTF-8", produces="application/json;charset=UTF-8")
 	public ResponseEntity<UserResVo> selectUserList(@RequestBody HashMap<String, Object> userMap,BindingResult bindingResult, HttpServletRequest request, HttpServletResponse response) throws GlobalException {
@@ -94,6 +99,7 @@ public class UserController {
      */
 
 	@Operation(summary = "회원 등록", description = "회원 등록합니다.")
+
     @ApiResponse(responseCode = "200",description = "등록 성공")
 	@RequestMapping(value="/templet/insertUser", method=RequestMethod.POST, consumes = "application/json;charset=UTF-8", produces="application/json;charset=UTF-8")
 	public ResponseEntity<UserResVo> insertUser(@RequestBody @Valid UserReqVo selectSampleReqVo,BindingResult bindingResult, HttpServletRequest request, HttpServletResponse response) throws GlobalException {
@@ -129,6 +135,9 @@ public class UserController {
     }
 	
 	@Operation(summary = "회원 수정", description = "회원 수정합니다.")
+	@Parameters({
+		@Parameter(name="jwtToken", description="jwtToken", required= true),
+	})
     @ApiResponse(responseCode = "200",description = "등록 성공")
 	@RequestMapping(value="/templet/updateUser", method=RequestMethod.POST, consumes = "application/json;charset=UTF-8", produces="application/json;charset=UTF-8")
 	public ResponseEntity<UserResVo> updateUser(@RequestBody @Valid UserReqVo selectSampleReqVo,BindingResult bindingResult, HttpServletRequest request, HttpServletResponse response) throws GlobalException {
@@ -171,6 +180,9 @@ public class UserController {
      */
 
 	@Operation(summary = "회원 목록", description = "회원 목록을 조회합니다.")
+	@Parameters({
+		@Parameter(name="jwtToken", description="jwtToken", required= true),
+	})
     @ApiResponse(responseCode = "200",description = "조회 성공")
 	@RequestMapping(value="/templet/deleteUser", method=RequestMethod.POST, consumes = "application/json;charset=UTF-8", produces="application/json;charset=UTF-8")
 	public ResponseEntity<UserResVo> deleteUser(@RequestBody HashMap<String, Object> userMap,BindingResult bindingResult, HttpServletRequest request, HttpServletResponse response) throws GlobalException {
@@ -208,7 +220,10 @@ public class UserController {
   */
 
 	@Operation(summary = "회원 목록", description = "회원 목록을 조회합니다.")
- @ApiResponse(responseCode = "200",description = "조회 성공")
+	@Parameters({
+		@Parameter(name="jwtToken", description="jwtToken", required= true),
+	})
+	@ApiResponse(responseCode = "200",description = "조회 성공")
 	@RequestMapping(value="/templet/selectUserPage", method=RequestMethod.POST, consumes = "application/json;charset=UTF-8", produces="application/json;charset=UTF-8")
 	public ResponseEntity<UserResVo> selectUserPage(@RequestBody HashMap<String, Object> userMap, BindingResult bindingResult, HttpServletRequest request, HttpServletResponse response) throws GlobalException {
 		

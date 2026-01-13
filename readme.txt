@@ -7,3 +7,4 @@ redis 다운로드
 https://github.com/microsoftarchive/redis/releases/
 
 
+http://localhost:8010/swagger-ui/index.html

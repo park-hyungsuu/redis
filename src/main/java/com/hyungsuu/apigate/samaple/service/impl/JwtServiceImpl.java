@@ -61,7 +61,7 @@ public class JwtServiceImpl implements JwtService {
 			// userAuth는 그냥 overWrite 업무에 달라 달라지니...
 	
 			jwtToken = jwtTokenUtil.generateToken(jwtTokenReqVo.getUserId(), (String)rtnMap.get("userAuth"), jwtExpTime,date);
-			Map<String,Object> dataMap = new HashMap<>();
+			Map<String,Object> dataMap = new HashMap<String,Object>();
 		    dataMap.put("userAuth",rtnMap.get("userAuth"));
 		    dataMap.put("jwtToken",jwtToken);
 		    dataMap.put("jwtStrTime", date);
@@ -74,7 +74,7 @@ public class JwtServiceImpl implements JwtService {
 			// redis에 기존 값이 있는 경우 일단은 그냥 overwrite
 			
 			jwtToken = jwtTokenUtil.generateToken(jwtTokenReqVo.getUserId(), (String)rtnMap.get("userAuth"), jwtExpTime, date);
-			Map<String,Object> dataMap = new HashMap<>();
+			Map<String,Object> dataMap = new HashMap<String,Object>();
 		    dataMap.put("userAuth",rtnMap.get("userAuth"));
 		    dataMap.put("jwtToken",jwtToken);
 		    dataMap.put("jwtStrTime",date);
@@ -83,6 +83,8 @@ public class JwtServiceImpl implements JwtService {
 			redisTemplate.opsForHash().putAll("JwtToken:"+jwtTokenReqVo.getUserId(), dataMap);
 			jwtTokenResVo.setJwtToken(jwtToken);
 		}
+		
+		log.info("1redisTemplate result-->"+redisTemplate.opsForHash().entries("JwtToken:"+jwtTokenReqVo.getUserId()).toString());
 		return jwtTokenResVo;
 
 	}
@@ -113,7 +115,7 @@ public class JwtServiceImpl implements JwtService {
 			// 주기가 중요한 경우에는 jwtStrTime 시간을 이용하여 주기 계산을 다시하여 jwtExpTime을 다시 산출.
 			// userAuth는 그냥 overWrite 업무에 달라 달라지니...
 			jwtToken = jwtTokenUtil.generateToken(refreshTokenReqVo.getUserId(), (String)rtnMap.get("userAuth"), jwtExpTime,date);
-			Map<String,Object> dataMap = new HashMap<>();
+			Map<String,Object> dataMap = new HashMap<String,Object>();
 		    dataMap.put("userAuth",rtnMap.get("userAuth"));
 		    dataMap.put("jwtToken",jwtToken);
 		    dataMap.put("jwtStrTime",date);
@@ -134,7 +136,7 @@ public class JwtServiceImpl implements JwtService {
 			long gapDif = gapMillis / (jwtExpTime * 60 * 1000);
 			
 			jwtToken = jwtTokenUtil.generateToken(refreshTokenReqVo.getUserId(), (String)rtnMap.get("userAuth"), jwtExpTime, date);
-			Map<String,Object> dataMap = new HashMap<>();
+			Map<String,Object> dataMap = new HashMap<String,Object>();
 		    dataMap.put("userAuth",rtnMap.get("userAuth"));
 		    dataMap.put("jwtToken",jwtToken);
 		    dataMap.put("jwtExpTime",new Date(strMillis  + ((gapDif +1) * jwtExpTime * 60 * 1000)));

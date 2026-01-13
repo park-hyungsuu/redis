@@ -15,7 +15,9 @@ import com.hyungsuu.apigate.samaple.web.UserController;
 
 import io.lettuce.core.api.StatefulConnection;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.redis.serializer.StringRedisSerializer;
 
+import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
 @Slf4j
 @Configuration
 @PropertySource({ "classpath:/application.properties", "classpath:/ecid/egovProps/globals.properties" })
@@ -74,9 +76,17 @@ public class RedisConfig {
 
     //RedisTemplate 사용을 위한 추가
     @Bean
-    public RedisTemplate<?, ?> redisTemplate() {
-        RedisTemplate<?, ?> redisTemplate = new RedisTemplate<>();
+    public RedisTemplate<String, Object> redisTemplate() {
+        RedisTemplate<String, Object> redisTemplate = new RedisTemplate<>();
         redisTemplate.setConnectionFactory(redisConnectionFactory());
+        
+        redisTemplate.setKeySerializer(new StringRedisSerializer());
+        redisTemplate.setHashKeySerializer(new StringRedisSerializer()); // Optional: for hash keys
+        redisTemplate.setHashValueSerializer(new GenericJackson2JsonRedisSerializer());        
+        // Use GenericJackson2JsonRedisSerializer for values and hash values
+ //       GenericJackson2JsonRedisSerializer jsonRedisSerializer = new GenericJackson2JsonRedisSerializer();
+ //       redisTemplate.setValueSerializer(jsonRedisSerializer);
+  //      redisTemplate.setHashValueSerializer(jsonRedisSerializer);
         return redisTemplate;
     }
 }
