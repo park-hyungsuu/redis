@@ -3,9 +3,6 @@ package com.hyungsuu.common.util;
 import java.util.concurrent.TimeUnit;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
-
-import com.hyungsuu.apigate.samaple.web.UserController;
-
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 

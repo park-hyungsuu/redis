@@ -34,12 +34,26 @@ public class TimeUtil {
 	
 	
 	
-//	String generatedString = RandomStringUtils.randomAlphanumeric(10);
+
 	public static void main(String[] args) {
 		String str = getDateAndRandom();
 //		String str = RandomStringUtils.randomNumeric(10);
 //    	String str = getDateFormatyyyyMMddHHmmssSSSS();
-        System.out.println(str);
+		
+		long milliseconds = System.currentTimeMillis();
+		long milliseconds2 = System.currentTimeMillis()+5000;
+
+		Date date1 = new java.sql.Timestamp(milliseconds);
+		Date date2 = new java.sql.Timestamp(milliseconds2);
+		long newmilliseconds = date1.getTime();
+		long newmilliseconds2 = date2.getTime();
+		
+        System.out.println(milliseconds);
+        System.out.println(milliseconds2);
+        System.out.println(date1);
+        System.out.println(date2);
+        System.out.println(newmilliseconds);
+        System.out.println(newmilliseconds2);
     }
 }
 

@@ -45,9 +45,6 @@ public class UserController {
     private UserService userService;
 
 	@Autowired
-	private JwtTokenUtil jwtTokenUtil;
-
-	@Autowired
 	private MessageSource messageSource;
 
     /**
@@ -67,13 +64,13 @@ public class UserController {
 			
 			log.info("selectSample. Start()==>" +  bindingResult.getErrorCount() +"::"+messageSource.getMessage("CODE.001" ,new String[] {},  Locale.KOREAN));
 			log.info("selectSample. Start()==>" +  userMap.toString());
-			UserResVo selectSampleResVo = new UserResVo();
-			selectSampleResVo = userService.selectUser(userMap);
+			UserResVo userResVo = new UserResVo();
+			userResVo = userService.selectUser(userMap);
 
-			selectSampleResVo.setSuccess();
+			userResVo.setSuccess();
 	
 			log.info("selectSample. End()" );
-			return new ResponseEntity<UserResVo>(selectSampleResVo, HttpStatus.OK);
+			return new ResponseEntity<UserResVo>(userResVo, HttpStatus.OK);
 		} catch (GlobalException ge) { // MicroService 처리 중 사용자 정의 에러 발생 시
 			if(ge.getMessage() == null || ge.getMessage().equals("")) {
 //				ge.setMessage(messageSource.getMessage("code." + ge.getCode(),  Locale.KOREAN));
@@ -107,17 +104,17 @@ public class UserController {
 			log.info("insertUser. Start()==>" +  bindingResult.getErrorCount() +"::"+messageSource.getMessage("CODE.001" ,new String[] {},  Locale.KOREAN));
 			log.info("insertUser. Start()==>" +  selectSampleReqVo.toString());
 			CommonUtil.checkBindingResult(bindingResult);
-			UserResVo selectSampleResVo = new UserResVo();
+			UserResVo userResVo = new UserResVo();
 			int retVal = userService.insertUser(selectSampleReqVo);
 
 			if (retVal == 1) {
-				selectSampleResVo.setSuccess();
+				userResVo.setSuccess();
 			} else {
-				selectSampleResVo.setFail("600", "11111");
+				userResVo.setFail("600", "11111");
 			}
 	
 			log.info("insertUser. End()" );
-			return new ResponseEntity<UserResVo>(selectSampleResVo, HttpStatus.OK);
+			return new ResponseEntity<UserResVo>(userResVo, HttpStatus.OK);
 		} catch (GlobalException ge) { // MicroService 처리 중 사용자 정의 에러 발생 시
 			if(ge.getMessage() == null || ge.getMessage().equals("")) {
 //				ge.setMessage(messageSource.getMessage("code." + ge.getCode(),  Locale.KOREAN));
@@ -126,8 +123,7 @@ public class UserController {
 			
 			throw ge;
 		} catch (Exception e) { // MicroService 처리 중 기타 예외 발생 시
-			e.printStackTrace();
-			log.info("GlobalException ==>" +"||"+e.getMessage() +"||"+e.toString() );
+			log.info("Exception ==> {}",e);
 			throw new GlobalException("600", "aaaa", e);
 		}
     }
@@ -143,17 +139,17 @@ public class UserController {
 			log.info("updateUser. Start()==>" +  bindingResult.getErrorCount() +"::"+messageSource.getMessage("CODE.001" ,new String[] {},  Locale.KOREAN));
 			log.info("updateUser. Start()==>" +  selectSampleReqVo.toString());
 			CommonUtil.checkBindingResult(bindingResult);
-			UserResVo selectSampleResVo = new UserResVo();
+			UserResVo userResVo = new UserResVo();
 			int retVal = userService.updateUser(selectSampleReqVo);
 
 			if (retVal == 1) {
-				selectSampleResVo.setSuccess();
+				userResVo.setSuccess();
 			} else {
-				selectSampleResVo.setFail("600", "11111");
+				userResVo.setFail("600", "11111");
 			}
 	
 			log.info("updateUser. End()" );
-			return new ResponseEntity<UserResVo>(selectSampleResVo, HttpStatus.OK);
+			return new ResponseEntity<UserResVo>(userResVo, HttpStatus.OK);
 		} catch (GlobalException ge) { // MicroService 처리 중 사용자 정의 에러 발생 시
 			if(ge.getMessage() == null || ge.getMessage().equals("")) {
 //				ge.setMessage(messageSource.getMessage("code." + ge.getCode(),  Locale.KOREAN));
@@ -162,8 +158,7 @@ public class UserController {
 			
 			throw ge;
 		} catch (Exception e) { // MicroService 처리 중 기타 예외 발생 시
-			e.printStackTrace();
-			log.info("GlobalException ==>" +"||"+e.getMessage() +"||"+e.toString() );
+			log.info("Exception ==> {}",e);
 			throw new GlobalException("600", "aaaa", e);
 		}
     }
@@ -185,13 +180,13 @@ public class UserController {
 			
 			log.info("selectSample. Start()==>" +  bindingResult.getErrorCount() +"::"+messageSource.getMessage("CODE.001" ,new String[] {},  Locale.KOREAN));
 			log.info("selectSample. Start()==>" +  userMap.toString());
-			UserResVo selectSampleResVo = new UserResVo();
+			UserResVo userResVo = new UserResVo();
 			int retVal = userService.deleteUser(userMap);
 
-			selectSampleResVo.setSuccess();
+			userResVo.setSuccess();
 	
 			log.info("selectSample. End()" );
-			return new ResponseEntity<UserResVo>(selectSampleResVo, HttpStatus.OK);
+			return new ResponseEntity<UserResVo>(userResVo, HttpStatus.OK);
 		} catch (GlobalException ge) { // MicroService 처리 중 사용자 정의 에러 발생 시
 			if(ge.getMessage() == null || ge.getMessage().equals("")) {
 //				ge.setMessage(messageSource.getMessage("code." + ge.getCode(),  Locale.KOREAN));
@@ -200,8 +195,7 @@ public class UserController {
 			
 			throw ge;
 		} catch (Exception e) { // MicroService 처리 중 기타 예외 발생 시
-			e.printStackTrace();
-			log.info("GlobalException ==>" +"||"+e.getMessage() +"||"+e.toString() );
+			log.info("Exception ==> {}",e);
 			throw new GlobalException("600", "aaaa", e);
 		}
     }
@@ -250,8 +244,7 @@ public class UserController {
 			
 			throw ge;
 		} catch (Exception e) { // MicroService 처리 중 기타 예외 발생 시
-			e.printStackTrace();
-			log.info("GlobalException ==>" +"||"+e.getMessage() +"||"+e.toString() );
+			log.info("Exception ==> {}",e);
 			throw new GlobalException("600", "aaaa", e);
 		}
  }

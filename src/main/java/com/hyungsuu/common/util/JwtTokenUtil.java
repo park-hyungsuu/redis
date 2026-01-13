@@ -11,12 +11,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import io.jsonwebtoken.Claims;
+import lombok.extern.slf4j.Slf4j;
 import io.jsonwebtoken.*;
-
+@Slf4j
 @Component
 public class JwtTokenUtil {
-	private static final Logger logger = LoggerFactory.getLogger(JwtTokenUtil.class);
-	
 	
 	private Date nowDate = Date.from(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant());
 	
@@ -28,6 +27,9 @@ public class JwtTokenUtil {
 	
 	@Value("${jwt.userAuth}")
 	private String jwtUserAuth;
+	
+	@Value("${jwt.expTime}")
+	private long jwtExpTime;
 	/*
 	 * TOKEN으로 유저명 찾아옴!!
 	 * */
@@ -92,19 +94,29 @@ public class JwtTokenUtil {
 	 * */
 	public String generateToken(String userId, String userAuth, long JWT_TOKEN_VALIDITY) {
 	
+		Date date =new Date(System.currentTimeMillis() + JWT_TOKEN_VALIDITY * 60 * 1000);
 		Claims claims = Jwts.claims().setSubject(userId);
     	// 업무에 따라 추가 및 삭제 필요
 		claims.put(jwtUserId, userId);
     	claims.put(jwtUserAuth, userAuth);
-		return doGenerateToken(claims, JWT_TOKEN_VALIDITY);
+		return doGenerateToken(claims, JWT_TOKEN_VALIDITY, date);
 	}
 	
-	private String doGenerateToken(Map<String, Object> claims, long JWT_TOKEN_VALIDITY) {
+	
+	public String generateToken(String userId, String userAuth, long JWT_TOKEN_VALIDITY, Date date) {
+		
+		Claims claims = Jwts.claims().setSubject(userId);
+    	// 업무에 따라 추가 및 삭제 필요
+		claims.put(jwtUserId, userId);
+    	claims.put(jwtUserAuth, userAuth);
+		return doGenerateToken(claims, JWT_TOKEN_VALIDITY, date);
+	}
+	private String doGenerateToken(Map<String, Object> claims, long JWT_TOKEN_VALIDITY, Date date) {
 		
 		return Jwts.builder()
 				.setClaims(claims)
-				.setIssuedAt(nowDate)
-				.setExpiration(new Date(System.currentTimeMillis() + JWT_TOKEN_VALIDITY * 1000))
+				.setIssuedAt(date)
+				.setExpiration(new Date(date.getTime() + JWT_TOKEN_VALIDITY * 60 *1000))
 //				.signWith(SignatureAlgorithm.RS512, secret)
 				.signWith(SignatureAlgorithm.HS512, secret)
 				.compact();
@@ -114,15 +126,15 @@ public class JwtTokenUtil {
 			getAllClaimsFromToken(token);
 			return true;
 		} catch (SignatureException ex) {
-            logger.error("Invalid JWT signature");
+            log.error("Invalid JWT signature");
         } catch (MalformedJwtException ex) {
-            logger.error("Invalid JWT token");
+        	log.error("Invalid JWT token");
         } catch (ExpiredJwtException ex) {
-            logger.error("Expired JWT token");
+        	log.error("Expired JWT token");
         } catch (UnsupportedJwtException ex) {
-            logger.error("Unsupported JWT token");
+        	log.error("Unsupported JWT token");
         } catch (IllegalArgumentException ex) {
-            logger.error("JWT claims string is empty.");
+        	log.error("JWT claims string is empty.");
         }
 
     	return false;
