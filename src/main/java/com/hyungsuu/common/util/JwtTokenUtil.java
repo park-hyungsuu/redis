@@ -19,17 +19,18 @@ public class JwtTokenUtil {
 	
 	private static Date nowDate = Date.from(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant());
 	
-	@Value("${jwt.secret.Key}")
+
 	private static String secret;
+	@Value("${jwt.secret.Key}")
+    public void setsecretName(String secret) {
+        JwtTokenUtil.secret = secret;
+	}
 	
-	@Value("${jwt.userId}")
-	private static String jwtUserId;
-	
-	@Value("${jwt.userAuth}")
-	private static String jwtUserAuth;
-	
-	@Value("${jwt.expTime}")
 	private static long jwtExpTime;
+	@Value("${jwt.expTime}")
+    public void setJwtExpTime(long jwtExpTime) {
+        JwtTokenUtil.jwtExpTime = jwtExpTime;
+    }
 	/*
 	 * TOKEN으로 유저명 찾아옴!!
 	 * */
@@ -68,13 +69,12 @@ public class JwtTokenUtil {
 		return null;
 	}
 	private static Claims getAllClaimsFromToken(String token) {
-		log.info("isTokenExpired"+token);
 		Claims claims= Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody();
-		log.info("isTokenExpired"+claims.toString());
+		log.debug("claims"+claims.toString());
 		return claims;
 	}
+	
 	public static Boolean isTokenExpired(String token) {
-		log.info("isTokenExpired"+token);
 		Boolean validateToken = validateToken(token);
 		if(validateToken) {
 			Date expiration = getExpirationDateFromToken(token);
@@ -97,35 +97,35 @@ public class JwtTokenUtil {
 	 * */
 	public static String generateToken(String userId, String userAuth, long JWT_TOKEN_VALIDITY) {
 	
-		Date date =new Date(System.currentTimeMillis() + JWT_TOKEN_VALIDITY * 60 * 1000);
+//		Date date =new Date(System.currentTimeMillis() + JWT_TOKEN_VALIDITY * 60 * 1000);
+		long date =System.currentTimeMillis() + JWT_TOKEN_VALIDITY * 60 * 1000;
 		Claims claims = Jwts.claims().setSubject(userId);
     	// 업무에 따라 추가 및 삭제 필요
-		claims.put(jwtUserId, userId);
-    	claims.put(jwtUserAuth, userAuth);
+		claims.put("jwtUserId", userId);
+    	claims.put("jwtUserAuth", userAuth);
 		return doGenerateToken(claims, JWT_TOKEN_VALIDITY, date);
 	}
 	
 	
-	public static String generateToken(String userId, String userAuth, long JWT_TOKEN_VALIDITY, Date date) {
+	public static String generateToken(String userId, String userAuth, long JWT_TOKEN_VALIDITY, long date) {
 		
 		Claims claims = Jwts.claims().setSubject(userId);
     	// 업무에 따라 추가 및 삭제 필요
-		claims.put(jwtUserId, userId);
-    	claims.put(jwtUserAuth, userAuth);
+		claims.put("jwtUserId", userId);
+    	claims.put("jwtUserAuth", userAuth);
 		return doGenerateToken(claims, JWT_TOKEN_VALIDITY, date);
 	}
-	private static String doGenerateToken(Map<String, Object> claims, long JWT_TOKEN_VALIDITY, Date date) {
+	private static String doGenerateToken(Map<String, Object> claims, long JWT_TOKEN_VALIDITY, long date) {
 		
 		return Jwts.builder()
 				.setClaims(claims)
-				.setIssuedAt(date)
-				.setExpiration(new Date(date.getTime() + JWT_TOKEN_VALIDITY * 60 *1000))
+				.setIssuedAt(new Date(date))
+				.setExpiration(new Date(date + JWT_TOKEN_VALIDITY * 60 *1000))
 //				.signWith(SignatureAlgorithm.RS512, secret)
 				.signWith(SignatureAlgorithm.HS512, secret)
 				.compact();
 	}
 	public static Boolean validateToken(String token) {
-		log.info("isTokenExpired"+token);
 		try{
 			getAllClaimsFromToken(token);
 			return true;
@@ -134,11 +134,11 @@ public class JwtTokenUtil {
         } catch (MalformedJwtException ex) {
         	log.error("Invalid JWT token");
         } catch (ExpiredJwtException ex) {
-        	log.error("Expired JWT token");
+        	log.error("Expired JWT token{}",ex);
         } catch (UnsupportedJwtException ex) {
         	log.error("Unsupported JWT token");
         } catch (IllegalArgumentException ex) {
-        	log.error("JWT claims string is empty.");
+        	log.error("JWT claims string is empty.{}",ex);
         }
 
     	return false;

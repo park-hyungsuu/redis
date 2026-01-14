@@ -1,13 +1,6 @@
 package com.hyungsuu.common.util;
 
 import java.util.regex.Pattern;
-
-
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.http.HttpRequest;
-
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 

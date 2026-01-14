@@ -57,19 +57,19 @@ public class UserController {
 	})
     @ApiResponse(responseCode = "200",description = "조회 성공")
 	@RequestMapping(value="/user/selectUser", method=RequestMethod.POST, consumes = "application/json;charset=UTF-8", produces="application/json;charset=UTF-8")
-	public ResponseEntity<UserResVo> selectUserList(@RequestBody HashMap<String, Object> userMap,@RequestHeader HttpHeaders header, HttpServletRequest request, HttpServletResponse response) throws GlobalException {
+	public ResponseEntity<UserResVo> selectUser(@RequestBody HashMap<String, Object> userMap,@RequestHeader HttpHeaders header, HttpServletRequest request, HttpServletResponse response) throws GlobalException {
 	
 		try {
 			
 			
 //			log.info("selectSample. Start()==>" +  bindingResult.getErrorCount() +"::"+messageSource.getMessage("CODE.001" ,new String[] {},  Locale.KOREAN));
-			log.info("selectSample. Start()==>" +  userMap.toString());
+			log.info("selectUser. Start()==>" +  userMap.toString());
 			UserResVo userResVo = new UserResVo();
 			userResVo = userService.selectUser(userMap);
 
 			userResVo.setSuccess();
 	
-			log.info("selectSample. End()" );
+
 			return new ResponseEntity<UserResVo>(userResVo, HttpStatus.OK);
 		} catch (GlobalException ge) { // MicroService 처리 중 사용자 정의 에러 발생 시
 			if(ge.getMessage() == null || ge.getMessage().equals("")) {
@@ -79,9 +79,10 @@ public class UserController {
 			
 			throw ge;
 		} catch (Exception e) { // MicroService 처리 중 기타 예외 발생 시
-			e.printStackTrace();
-			log.info("GlobalException ==>" +"||"+e.getMessage() +"||"+e.toString() );
+			log.info("GlobalException ==> {} ", e );
 			throw new GlobalException("600", "aaaa", e);
+		} finally {
+			log.info("selectUser. End()" );
 		}
     }
 	
@@ -95,17 +96,17 @@ public class UserController {
 
 	@Operation(summary = "회원 등록", description = "회원 등록합니다.")
     @ApiResponse(responseCode = "200",description = "등록 성공")
-	@RequestMapping(value="/templet/insertUser", method=RequestMethod.POST, consumes = "application/json;charset=UTF-8", produces="application/json;charset=UTF-8")
-	public ResponseEntity<UserResVo> insertUser(@RequestBody @Valid UserReqVo selectSampleReqVo,BindingResult bindingResult, HttpServletRequest request, HttpServletResponse response) throws GlobalException {
+	@RequestMapping(value="/unAuth/insertUser", method=RequestMethod.POST, consumes = "application/json;charset=UTF-8", produces="application/json;charset=UTF-8")
+	public ResponseEntity<UserResVo> insertUser(@RequestBody @Valid UserReqVo userReqVo,BindingResult bindingResult, HttpServletRequest request, HttpServletResponse response) throws GlobalException {
 		
 		try {
 			
 			
 			log.info("insertUser. Start()==>" +  bindingResult.getErrorCount() +"::"+messageSource.getMessage("CODE.001" ,new String[] {},  Locale.KOREAN));
-			log.info("insertUser. Start()==>" +  selectSampleReqVo.toString());
+			log.info("insertUser. Start()==>" +  userReqVo.toString());
 			CommonUtil.checkBindingResult(bindingResult);
 			UserResVo userResVo = new UserResVo();
-			int retVal = userService.insertUser(selectSampleReqVo);
+			int retVal = userService.insertUser(userReqVo);
 
 			if (retVal == 1) {
 				userResVo.setSuccess();
@@ -113,11 +114,10 @@ public class UserController {
 				userResVo.setFail("600", "11111");
 			}
 	
-			log.info("insertUser. End()" );
+			
 			return new ResponseEntity<UserResVo>(userResVo, HttpStatus.OK);
 		} catch (GlobalException ge) { // MicroService 처리 중 사용자 정의 에러 발생 시
 			if(ge.getMessage() == null || ge.getMessage().equals("")) {
-//				ge.setMessage(messageSource.getMessage("code." + ge.getCode(),  Locale.KOREAN));
 				ge.setMessage("fail");
 			}
 			
@@ -125,6 +125,8 @@ public class UserController {
 		} catch (Exception e) { // MicroService 처리 중 기타 예외 발생 시
 			log.info("Exception ==> {}",e);
 			throw new GlobalException("600", "aaaa", e);
+		} finally {
+			log.info("insertUser. End()" );
 		}
     }
 	
@@ -134,16 +136,16 @@ public class UserController {
 	})
     @ApiResponse(responseCode = "200",description = "등록 성공")
 	@RequestMapping(value="/user/updateUser", method=RequestMethod.POST, consumes = "application/json;charset=UTF-8", produces="application/json;charset=UTF-8")
-	public ResponseEntity<UserResVo> updateUser(@RequestBody @Valid UserReqVo selectSampleReqVo,BindingResult bindingResult, HttpServletRequest request, HttpServletResponse response) throws GlobalException {
+	public ResponseEntity<UserResVo> updateUser(@RequestBody @Valid UserReqVo userReqVo,BindingResult bindingResult, HttpServletRequest request, HttpServletResponse response) throws GlobalException {
 		
 		try {
 			
 			
 			log.info("updateUser. Start()==>" +  bindingResult.getErrorCount() +"::"+messageSource.getMessage("CODE.001" ,new String[] {},  Locale.KOREAN));
-			log.info("updateUser. Start()==>" +  selectSampleReqVo.toString());
+			log.info("updateUser. Start()==>" +  userReqVo.toString());
 			CommonUtil.checkBindingResult(bindingResult);
 			UserResVo userResVo = new UserResVo();
-			int retVal = userService.updateUser(selectSampleReqVo);
+			int retVal = userService.updateUser(userReqVo);
 
 			if (retVal == 1) {
 				userResVo.setSuccess();
@@ -178,7 +180,7 @@ public class UserController {
 		@Parameter(name="jwtToken", description="jwtToken", required= true),
 	})
     @ApiResponse(responseCode = "200",description = "조회 성공")
-	@RequestMapping(value="/templet/deleteUser", method=RequestMethod.POST, consumes = "application/json;charset=UTF-8", produces="application/json;charset=UTF-8")
+	@RequestMapping(value="/user/deleteUser", method=RequestMethod.POST, consumes = "application/json;charset=UTF-8", produces="application/json;charset=UTF-8")
 	public ResponseEntity<UserResVo> deleteUser(@RequestBody HashMap<String, Object> userMap,BindingResult bindingResult, HttpServletRequest request, HttpServletResponse response) throws GlobalException {
 		
 		try {
@@ -198,7 +200,6 @@ public class UserController {
 //				ge.setMessage(messageSource.getMessage("code." + ge.getCode(),  Locale.KOREAN));
 				ge.setMessage("fail");
 			}
-			
 			throw ge;
 		} catch (Exception e) { // MicroService 처리 중 기타 예외 발생 시
 			log.info("Exception ==> {}",e);
@@ -218,7 +219,7 @@ public class UserController {
 		@Parameter(name="jwtToken", description="jwtToken", required= true),
 	})
 	@ApiResponse(responseCode = "200",description = "조회 성공")
-	@RequestMapping(value="/templet/selectUserPage", method=RequestMethod.POST, consumes = "application/json;charset=UTF-8", produces="application/json;charset=UTF-8")
+	@RequestMapping(value="/admin/selectUserPage", method=RequestMethod.POST, consumes = "application/json;charset=UTF-8", produces="application/json;charset=UTF-8")
 	public ResponseEntity<UserResVo> selectUserPage(@RequestBody HashMap<String, Object> userMap, BindingResult bindingResult, HttpServletRequest request, HttpServletResponse response) throws GlobalException {
 		
 		try {
@@ -250,7 +251,6 @@ public class UserController {
 //				ge.setMessage(messageSource.getMessage("code." + ge.getCode(),  Locale.KOREAN));
 				ge.setMessage("fail");
 			}
-			
 			throw ge;
 		} catch (Exception e) { // MicroService 처리 중 기타 예외 발생 시
 			log.info("Exception ==> {}",e);

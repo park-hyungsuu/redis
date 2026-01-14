@@ -24,10 +24,7 @@ import lombok.extern.slf4j.Slf4j;
 @Component
 public class AuthenticInterceptor extends WebContentInterceptor {
 
-	
-	@Autowired
-	private JwtTokenUtil jwtTokenUtil;
-	
+
 
 //	/**
 //	 * 세션에 계정정보(LoginVO)가 있는지 여부로 인증 여부를 체크한다.
@@ -56,16 +53,13 @@ public class AuthenticInterceptor extends WebContentInterceptor {
 
 
 		if (req.getHeader("jwtToken") == null) {
-			log.info("preHandle333");
 			GlobalException ge = new GlobalException("4444","fail");
 			throw new ServletException("1111",ge);
 		}
-		log.info("44444");
-		if ( jwtTokenUtil.isTokenExpired(req.getHeader("jwtToken"))) {
-			log.info("preHandle1");
+		if ( JwtTokenUtil.isTokenExpired(req.getHeader("jwtToken"))) {
 			return true;
 		} else {
-			log.debug("preHandle2" );
+
             HandlerMethod method = (HandlerMethod) handler;
             log.debug("Controller: {}", method.getBeanType().getSimpleName());
             log.debug("Method: {}", method.getMethod().getName());
@@ -84,7 +78,6 @@ public class AuthenticInterceptor extends WebContentInterceptor {
 				res.getWriter().write(mapper.writeValueAsString(baseResponseVo));
 				res.getWriter().flush();
 			} catch (IOException e) {
-				log.info("IOException");
 				log.info("IOException {}",e);
 				GlobalException ge = new GlobalException("4444","fail", e);
 				throw new ServletException("1111",ge);
@@ -92,6 +85,5 @@ public class AuthenticInterceptor extends WebContentInterceptor {
 		
 			return false;
 		}
-	
 	}
 }

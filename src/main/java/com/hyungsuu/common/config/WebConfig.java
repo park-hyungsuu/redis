@@ -25,6 +25,6 @@ public class WebConfig implements WebMvcConfigurer {
 		registry.addInterceptor(new AuthenticInterceptor( ))
 			.order(0)
 			.addPathPatterns("/api/**") // 모든 URL에 적용
-			.excludePathPatterns("/api/token/**", "/api/templet/**"); // 특정 URL 제외
+			.excludePathPatterns("/api/token/**", "/api/unAuth/**"); // 특정 URL 제외
 	}
 }
