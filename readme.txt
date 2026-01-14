@@ -15,3 +15,5 @@ http://localhost:8010/swagger-ui/index.html
 soapui다운로드 
 https://www.soapui.org/downloads/soapui/
 
+soapui 설치후  redis.xml를 import project 로 불러오면 됨
+soapui 사용법은 구글링
