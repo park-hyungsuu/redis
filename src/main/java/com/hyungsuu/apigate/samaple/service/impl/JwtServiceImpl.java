@@ -30,6 +30,7 @@ public class JwtServiceImpl implements JwtService {
 	
 	@Autowired
 	private JwtTokenUtil jwtTokenUtil;
+	
 	@Autowired
 	private RedisTemplate<String, Object> redisTemplate;	
 	
@@ -55,7 +56,8 @@ public class JwtServiceImpl implements JwtService {
 		JwtTokenResVo jwtTokenResVo = new JwtTokenResVo();
 		String jwtToken = null;
 		Date date = new Date(System.currentTimeMillis());
-		if (redisTemplate.opsForHash().size("JwtToken:"+jwtTokenReqVo.getUserId()) < 1) {
+		Map<?, ?> rtnRedisMap = redisTemplate.opsForHash().entries("JwtToken:"+jwtTokenReqVo.getUserId());
+		if (rtnRedisMap == null) {
 			// redis에 값이 없는 경우
 			// 주기가 중요한 경우에는 jwtStrTime 시간을 이용하여 주기 계산을 다시하여 jwtExpTime을 다시 산출.
 			// userAuth는 그냥 overWrite 업무에 달라 달라지니...
@@ -71,17 +73,19 @@ public class JwtServiceImpl implements JwtService {
 			redisTemplate.opsForHash().putAll("JwtToken:"+jwtTokenReqVo.getUserId(), dataMap);
 			jwtTokenResVo.setJwtToken(jwtToken);
 		} else {
+			
+//			throw new GlobalException("600", "토근 존재, getRefreshJwtToken api 이용하세요.");
 			// redis에 기존 값이 있는 경우 일단은 그냥 overwrite
 			
-			jwtToken = jwtTokenUtil.generateToken(jwtTokenReqVo.getUserId(), (String)rtnMap.get("userAuth"), jwtExpTime, date);
-			Map<String,Object> dataMap = new HashMap<String,Object>();
-		    dataMap.put("userAuth",rtnMap.get("userAuth"));
-		    dataMap.put("jwtToken",jwtToken);
-		    dataMap.put("jwtStrTime",date);
-		    dataMap.put("jwtExpTime",new Date(date.getTime() + jwtExpTime ));
-		    log.info("2jwtToken ==>" +jwtToken);
-			redisTemplate.opsForHash().putAll("JwtToken:"+jwtTokenReqVo.getUserId(), dataMap);
-			jwtTokenResVo.setJwtToken(jwtToken);
+//			jwtToken = jwtTokenUtil.generateToken(jwtTokenReqVo.getUserId(), (String)rtnMap.get("userAuth"), jwtExpTime, date);
+//			Map<String,Object> dataMap = new HashMap<String,Object>();
+//		    dataMap.put("userAuth",rtnMap.get("userAuth"));
+//		    dataMap.put("jwtToken",jwtToken);
+//		    dataMap.put("jwtStrTime",date);
+//		    dataMap.put("jwtExpTime",new Date(date.getTime() + jwtExpTime ));
+//		    log.info("2jwtToken ==>" +jwtToken);
+//			redisTemplate.opsForHash().putAll("JwtToken:"+jwtTokenReqVo.getUserId(), dataMap);
+			jwtTokenResVo.setJwtToken(rtnRedisMap.get("jwtToken").toString());
 		}
 		
 		log.info("1redisTemplate result-->"+redisTemplate.opsForHash().entries("JwtToken:"+jwtTokenReqVo.getUserId()).toString());

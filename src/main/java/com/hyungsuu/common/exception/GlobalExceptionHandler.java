@@ -15,6 +15,7 @@ import org.springframework.web.servlet.resource.NoResourceFoundException;
 
 import com.hyungsuu.common.vo.BaseResponseVo;
 
+import jakarta.servlet.ServletException;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -93,6 +94,37 @@ public class GlobalExceptionHandler {
 		return new ResponseEntity<BaseResponseVo>(baseResVo, headers, HttpStatus.OK);
 
 	}
+	
+	@ExceptionHandler(ServletException.class)
+	public ResponseEntity<BaseResponseVo> handleValidationExceptions(ServletException ex) {
+		log.info("Exception is happened!  {}" + ex);
+		HttpHeaders headers = new HttpHeaders();
+		BaseResponseVo baseResVo = new BaseResponseVo();
+		
+		if (ex.getRootCause() instanceof GlobalException) {
+			GlobalException e = (GlobalException) ex.getRootCause();
+
+			headers.setContentType(MediaType.valueOf("application/json;charset=UTF-8"));
+
+
+			baseResVo.setCode(e.getCode());
+			baseResVo.setMessage(e.getMessage());
+			
+		} else {
+
+			headers.setContentType(MediaType.valueOf("application/json;charset=UTF-8"));
+		
+	
+			baseResVo.setCode("44444");
+			baseResVo.setMessage("Exception is happened!");
+		}
+		// Exception시에는 globalFilter에서 처리 못하니 ExceptionHandler에사 MDC 삭제
+       	MDC.remove(mdcName);
+       	
+		return new ResponseEntity<BaseResponseVo>(baseResVo, headers, HttpStatus.OK);
+	}
+	
+	
 
 	@ExceptionHandler(Exception.class)
 	public ResponseEntity<BaseResponseVo> handleValidationExceptions(Exception ex) {

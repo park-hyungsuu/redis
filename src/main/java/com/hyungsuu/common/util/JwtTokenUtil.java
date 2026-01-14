@@ -1,39 +1,39 @@
 package com.hyungsuu.common.util;
 
 import java.time.LocalDateTime;
+
 import java.time.ZoneId;
 import java.util.Date;
 import java.util.Map;
 import java.util.function.Function;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import io.jsonwebtoken.Claims;
 import lombok.extern.slf4j.Slf4j;
 import io.jsonwebtoken.*;
+
 @Slf4j
 @Component
 public class JwtTokenUtil {
 	
-	private Date nowDate = Date.from(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant());
+	private static Date nowDate = Date.from(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant());
 	
 	@Value("${jwt.secret.Key}")
-	private String secret;
+	private static String secret;
 	
 	@Value("${jwt.userId}")
-	private String jwtUserId;
+	private static String jwtUserId;
 	
 	@Value("${jwt.userAuth}")
-	private String jwtUserAuth;
+	private static String jwtUserAuth;
 	
 	@Value("${jwt.expTime}")
-	private long jwtExpTime;
+	private static long jwtExpTime;
 	/*
 	 * TOKEN으로 유저명 찾아옴!!
 	 * */
-	public String getUsernameFromToken(String token) {
+	public static String getUsernameFromToken(String token) {
 		if(validateToken(token)) {
 			return getClaimFromToken(token, Claims::getSubject);
 		}
@@ -43,7 +43,7 @@ public class JwtTokenUtil {
 	/*
 	 * TOKEN으로 데이터 찾아옴!!
 	 * */
-	public String getClaimsDataFromToken(String name,String token) {
+	public static String getClaimsDataFromToken(String name,String token) {
 		if(validateToken(token)) {
 			Claims claims = Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody();
 			String realname = claims.get(name,String.class);
@@ -55,11 +55,11 @@ public class JwtTokenUtil {
 	 * TOKEN으로 유효시간 찾아옴!!
 	 * */
 	
-	public Date getExpirationDateFromToken(String token) {
+	public static Date getExpirationDateFromToken(String token) {
 		return getClaimFromToken(token, Claims::getExpiration);
 
 	}
-	public <T> T getClaimFromToken(String token, Function<Claims, T> claimsResolver) {
+	public static <T> T getClaimFromToken(String token, Function<Claims, T> claimsResolver) {
 		if(validateToken(token)) {
 			final Claims claims = getAllClaimsFromToken(token);
 			
@@ -67,11 +67,14 @@ public class JwtTokenUtil {
 		}
 		return null;
 	}
-	private Claims getAllClaimsFromToken(String token) {
+	private static Claims getAllClaimsFromToken(String token) {
+		log.info("isTokenExpired"+token);
 		Claims claims= Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody();
+		log.info("isTokenExpired"+claims.toString());
 		return claims;
 	}
-	public Boolean isTokenExpired(String token) {
+	public static Boolean isTokenExpired(String token) {
+		log.info("isTokenExpired"+token);
 		Boolean validateToken = validateToken(token);
 		if(validateToken) {
 			Date expiration = getExpirationDateFromToken(token);
@@ -92,7 +95,7 @@ public class JwtTokenUtil {
 	/*
 	 * 토큰생성
 	 * */
-	public String generateToken(String userId, String userAuth, long JWT_TOKEN_VALIDITY) {
+	public static String generateToken(String userId, String userAuth, long JWT_TOKEN_VALIDITY) {
 	
 		Date date =new Date(System.currentTimeMillis() + JWT_TOKEN_VALIDITY * 60 * 1000);
 		Claims claims = Jwts.claims().setSubject(userId);
@@ -103,7 +106,7 @@ public class JwtTokenUtil {
 	}
 	
 	
-	public String generateToken(String userId, String userAuth, long JWT_TOKEN_VALIDITY, Date date) {
+	public static String generateToken(String userId, String userAuth, long JWT_TOKEN_VALIDITY, Date date) {
 		
 		Claims claims = Jwts.claims().setSubject(userId);
     	// 업무에 따라 추가 및 삭제 필요
@@ -111,7 +114,7 @@ public class JwtTokenUtil {
     	claims.put(jwtUserAuth, userAuth);
 		return doGenerateToken(claims, JWT_TOKEN_VALIDITY, date);
 	}
-	private String doGenerateToken(Map<String, Object> claims, long JWT_TOKEN_VALIDITY, Date date) {
+	private static String doGenerateToken(Map<String, Object> claims, long JWT_TOKEN_VALIDITY, Date date) {
 		
 		return Jwts.builder()
 				.setClaims(claims)
@@ -121,7 +124,8 @@ public class JwtTokenUtil {
 				.signWith(SignatureAlgorithm.HS512, secret)
 				.compact();
 	}
-	public Boolean validateToken(String token) {
+	public static Boolean validateToken(String token) {
+		log.info("isTokenExpired"+token);
 		try{
 			getAllClaimsFromToken(token);
 			return true;

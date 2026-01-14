@@ -28,7 +28,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @RestController
-@RequestMapping(value="/api1")
+@RequestMapping(value="/api")
 public class JwtController {
 
 	@Autowired
@@ -60,7 +60,7 @@ public class JwtController {
 //			})
 	
 	@Operation(summary = "token 생성", description = "token 생성합니다")
-    @RequestMapping(value="/templet/getJwtToken", method=RequestMethod.POST, consumes = "application/json;charset=UTF-8", produces="application/json;charset=UTF-8")
+    @RequestMapping(value="/token/getJwtToken", method=RequestMethod.POST, consumes = "application/json;charset=UTF-8", produces="application/json;charset=UTF-8")
     public ResponseEntity<JwtTokenResVo> getJwtToken(@Valid @RequestBody JwtTokenReqVo jwtTokenReqVo, BindingResult bindingResult, HttpServletRequest request, HttpServletResponse response) throws GlobalException {
 
 		try {
@@ -89,7 +89,7 @@ public class JwtController {
 
 	
 	@Operation(summary = "Refresh Token 생성", description = "Refresh Token 생성합니다")
-    @RequestMapping(value="/templet/getRefreshToken", method=RequestMethod.POST, consumes = "application/json;charset=UTF-8", produces="application/json;charset=UTF-8")
+    @RequestMapping(value="/token/getRefreshToken", method=RequestMethod.POST, consumes = "application/json;charset=UTF-8", produces="application/json;charset=UTF-8")
     public ResponseEntity<JwtTokenResVo> getRefreshJwtToken(@Valid @RequestBody RefreshTokenReqVo refreshTokenReqVo, BindingResult bindingResult, HttpServletRequest request, HttpServletResponse response) throws GlobalException {
 
 		try {

@@ -7,25 +7,22 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.hyungsuu.apigate.samaple.service.UserService;
 import com.hyungsuu.apigate.samaple.vo.UserReqVo;
 import com.hyungsuu.apigate.samaple.vo.UserResVo;
 import com.hyungsuu.common.exception.GlobalException;
 import com.hyungsuu.common.util.CommonUtil;
-import com.hyungsuu.common.util.JwtTokenUtil;
-
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.Parameters;
@@ -33,8 +30,6 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
-//import io.swagger.annotations.ApiOperation;
-//import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -61,13 +56,13 @@ public class UserController {
 		@Parameter(name="jwtToken", description="jwtToken", required= true),
 	})
     @ApiResponse(responseCode = "200",description = "조회 성공")
-	@RequestMapping(value="/templet/selectUser", method=RequestMethod.POST, consumes = "application/json;charset=UTF-8", produces="application/json;charset=UTF-8")
-	public ResponseEntity<UserResVo> selectUserList(@RequestBody HashMap<String, Object> userMap,BindingResult bindingResult, HttpServletRequest request, HttpServletResponse response) throws GlobalException {
-		
+	@RequestMapping(value="/user/selectUser", method=RequestMethod.POST, consumes = "application/json;charset=UTF-8", produces="application/json;charset=UTF-8")
+	public ResponseEntity<UserResVo> selectUserList(@RequestBody HashMap<String, Object> userMap,@RequestHeader HttpHeaders header, HttpServletRequest request, HttpServletResponse response) throws GlobalException {
+	
 		try {
 			
 			
-			log.info("selectSample. Start()==>" +  bindingResult.getErrorCount() +"::"+messageSource.getMessage("CODE.001" ,new String[] {},  Locale.KOREAN));
+//			log.info("selectSample. Start()==>" +  bindingResult.getErrorCount() +"::"+messageSource.getMessage("CODE.001" ,new String[] {},  Locale.KOREAN));
 			log.info("selectSample. Start()==>" +  userMap.toString());
 			UserResVo userResVo = new UserResVo();
 			userResVo = userService.selectUser(userMap);
@@ -99,7 +94,6 @@ public class UserController {
      */
 
 	@Operation(summary = "회원 등록", description = "회원 등록합니다.")
-
     @ApiResponse(responseCode = "200",description = "등록 성공")
 	@RequestMapping(value="/templet/insertUser", method=RequestMethod.POST, consumes = "application/json;charset=UTF-8", produces="application/json;charset=UTF-8")
 	public ResponseEntity<UserResVo> insertUser(@RequestBody @Valid UserReqVo selectSampleReqVo,BindingResult bindingResult, HttpServletRequest request, HttpServletResponse response) throws GlobalException {
@@ -139,7 +133,7 @@ public class UserController {
 		@Parameter(name="jwtToken", description="jwtToken", required= true),
 	})
     @ApiResponse(responseCode = "200",description = "등록 성공")
-	@RequestMapping(value="/templet/updateUser", method=RequestMethod.POST, consumes = "application/json;charset=UTF-8", produces="application/json;charset=UTF-8")
+	@RequestMapping(value="/user/updateUser", method=RequestMethod.POST, consumes = "application/json;charset=UTF-8", produces="application/json;charset=UTF-8")
 	public ResponseEntity<UserResVo> updateUser(@RequestBody @Valid UserReqVo selectSampleReqVo,BindingResult bindingResult, HttpServletRequest request, HttpServletResponse response) throws GlobalException {
 		
 		try {
