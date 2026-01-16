@@ -1,5 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="fae6782d-40a4-4288-8f89-568c83a7e26a" activeEnvironment="Default" name="redis" soapui-version="5.7.2" abortOnError="false" runType="SEQUENTIAL" resourceRoot="" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="3c15f8ba-b9ac-4fe3-a7e6-dc985cacfd70" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8010" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://BOOK-33RN2OA1ST:8080/</con:endpoint><con:endpoint>http://localhost:8090</con:endpoint></con:endpoints><con:resource name="getJwtToken" path="/api/token/getJwtToken" id="05788e13-9a8b-41f9-b49f-5c8285bf7b92"><con:settings/><con:parameters/><con:method name="getJwtToken" id="f344f51e-0445-47de-92c1-80115b33ce28" method="POST"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>text/html;charset=utf-8</con:mediaType><con:status>400 500 404</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>500</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>404 500</con:status><con:params/></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>403</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>403</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>403</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>403</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>403</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>403</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>403</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>403</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>404</con:status><con:params/></con:representation><con:request name="getJwtToken" id="ad8ce46c-28a2-4eba-8de2-5814b2728543" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8010</con:endpoint><con:request>{ 
+<con:soapui-project id="fae6782d-40a4-4288-8f89-568c83a7e26a" activeEnvironment="Default" name="redis" soapui-version="5.7.2" abortOnError="false" runType="SEQUENTIAL" resourceRoot="" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.LoadTestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Print Report Statistics" value="false"/>
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="TestSuite" value="&lt;all>"/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Report to Generate" value=""/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="LoadTest" value="&lt;all>"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="ThreadCount" value=""/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="TestCase" value="&lt;all>"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="TestRunner Path" value="C:\Program Files\SmartBear\SoapUI-5.7.2/bin"/>
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Limit" value=""/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="false"/>
+</xml-fragment>]]></con:setting><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Export JUnit Results" value="false"/>
+  <con:entry key="Export All" value="false"/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="TestSuite" value="TestSuite 1"/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Select Report Type" value=""/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="Print Report" value="false"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Export JUnit Results with test properties" value="false"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="TestCase" value="등록 및 수정"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="false"/>
+</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:RestService" id="3c15f8ba-b9ac-4fe3-a7e6-dc985cacfd70" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8010" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://BOOK-33RN2OA1ST:8080/</con:endpoint><con:endpoint>http://localhost:8090</con:endpoint></con:endpoints><con:resource name="getJwtToken" path="/api/token/getJwtToken" id="05788e13-9a8b-41f9-b49f-5c8285bf7b92"><con:settings/><con:parameters/><con:method name="getJwtToken" id="f344f51e-0445-47de-92c1-80115b33ce28" method="POST"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>text/html;charset=utf-8</con:mediaType><con:status>400 500 404</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>500</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>404 500</con:status><con:params/></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>403</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>403</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>403</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>403</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>403</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>403</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>403</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>403</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>404</con:status><con:params/></con:representation><con:request name="getJwtToken" id="ad8ce46c-28a2-4eba-8de2-5814b2728543" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8010</con:endpoint><con:request>{ 
    "userId":"aaaaaaaaa",
     "userPasswd": "bbbbbbbbb"
 }
@@ -7,7 +66,7 @@
    "userId":"aaaaaaa",
     "userAuth": "BBAABB"
 }
-</con:request><con:originalUri>http://localhost/api/templet/selectSample</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="InsertUser" path="/api/unAuth/insertUser" id="ea539327-ce53-479b-9b16-5c17680bcf4f"><con:settings/><con:parameters/><con:method name="insertUser" id="feef2a80-9eba-4f49-aaa7-030e7066eadb" method="POST"><con:settings><con:setting id="RecordResponseRepresentations">true</con:setting></con:settings><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:sel="http://localhost/api/templet/selectSample">sel:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>403</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>403</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:sel="http://localhost/api/templet/selectSample">sel:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:sel="http://localhost/api/templet/selectSample">sel:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="insertUser" id="ab101f41-a57b-4d25-99ca-dffdeaa617aa" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="jwtToken" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYWFhIiwiJHtqd3QudXNlcklkfSI6ImFhYWEiLCIke2p3dC51c2VyQXV0aH0iOiJCQkJCIiwiaWF0IjoxNzU2Njk1MDUzLCJleHAiOjE3NTY3MDU5NDd9.7GsKn_MoKkGIhtK85eIObJLLzHjzisPuTMEb84XuOcUarHMLg_sx5hqLup250zXFNgP3lpvltuujmUDs1FOlIw" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:8010</con:endpoint><con:request>{ 
+</con:request><con:originalUri>http://localhost/api/templet/selectSample</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="InsertUser" path="/api/unAuth/insertUser" id="ea539327-ce53-479b-9b16-5c17680bcf4f"><con:settings/><con:parameters/><con:method name="insertUser" id="feef2a80-9eba-4f49-aaa7-030e7066eadb" method="POST"><con:settings><con:setting id="RecordResponseRepresentations">true</con:setting></con:settings><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:sel="http://localhost/api/templet/selectSample">sel:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>403</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>403</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:sel="http://localhost/api/templet/selectSample">sel:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:sel="http://localhost/api/templet/selectSample">sel:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="insertUser" id="ab101f41-a57b-4d25-99ca-dffdeaa617aa" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="jwtToken" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYWFhIiwiJHtqd3QudXNlcklkfSI6ImFhYWEiLCIke2p3dC51c2VyQXV0aH0iOiJCQkJCIiwiaWF0IjoxNzU2Njk1MDUzLCJleHAiOjE3NTY3MDU5NDd9.7GsKn_MoKkGIhtK85eIObJLLzHjzisPuTMEb84XuOcUarHMLg_sx5hqLup250zXFNgP3lpvltuujmUDs1FOlIw" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:8010</con:endpoint><con:request>{ 
    "userId":"aaaaaaa",
     "userPasswd":"aaaaaaa",
     "userName":"aaaaaaa",
@@ -29,7 +88,7 @@
 </con:request><con:originalUri>http://localhost/api//templet/select</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="selectUserPage" path="/api/admin/selectUserPage" id="ea539327-ce53-479b-9b16-5c17680bcf4f"><con:settings/><con:parameters/><con:method name="selectUserPage" id="feef2a80-9eba-4f49-aaa7-030e7066eadb" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:sel="http://localhost/api/templet/selectSample">sel:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>403</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>403</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:sel="http://localhost/api/templet/selectSample">sel:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:sel="http://localhost/api/templet/selectSample">sel:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="selectUserPage" id="ab101f41-a57b-4d25-99ca-dffdeaa617aa" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="jwtToken" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYWFhIiwiJHtqd3QudXNlcklkfSI6ImFhYWEiLCIke2p3dC51c2VyQXV0aH0iOiJCQkJCIiwiaWF0IjoxNzU2Njk1MDUzLCJleHAiOjE3NTY3MDU5NDd9.7GsKn_MoKkGIhtK85eIObJLLzHjzisPuTMEb84XuOcUarHMLg_sx5hqLup250zXFNgP3lpvltuujmUDs1FOlIw" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:8010</con:endpoint><con:request>{ 
    "userId":"aaaaaaa"
 }
-</con:request><con:originalUri>http://localhost/api/templet/selectSample</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:testSuite id="e1b6fb1c-5ab4-4922-b62b-d27cf766b99f" name="TestSuite 1"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="ffa019fd-7feb-4212-ba65-1e21ffd45325" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="testCase" searchProperties="true"><con:settings/><con:testStep type="groovy" name="init" id="66f32de1-48b8-49c5-9951-890f62a5196c"><con:settings/><con:config><script>import com.eviware.soapui.SoapUI
+</con:request><con:originalUri>http://localhost/api/templet/selectSample</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:testSuite id="e1b6fb1c-5ab4-4922-b62b-d27cf766b99f" name="TestSuite 1"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="ffa019fd-7feb-4212-ba65-1e21ffd45325" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="등록 및 수정" searchProperties="true"><con:settings/><con:testStep type="groovy" name="init" id="66f32de1-48b8-49c5-9951-890f62a5196c"><con:settings/><con:config><script>import com.eviware.soapui.SoapUI
 import org.apache.commons.lang.RandomStringUtils
 
 // 1. Global Property 설정 (값 쓰기)
@@ -162,12 +221,12 @@ testRunner.testCase.setPropertyValue("userName",userName)
 testRunner.testCase.setPropertyValue("userAuth",userAuth)
 testRunner.testCase.setPropertyValue("jwtToken",response.jwtToken)
 </script></con:config></con:testStep><con:testStep type="restrequest" name="updateUser" id="ec644519-d079-46a5-b32c-7a1310c6e2dd"><con:settings/><con:config service="http://localhost:8010" resourcePath="/api/user/updateUser" methodName="updateUser" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="updateUser" id="ab101f41-a57b-4d25-99ca-dffdeaa617aa" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="jwtToken" value="${#TestCase#jwtToken}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:8010</con:endpoint><con:request>{ 
-   "userId":"aaaaaaa",
-    "userPasswd":"aaaaaaa",
-    "userName":"aaaaaaa",
-    "userAuth": "user"
+   "userId":"${#TestCase#userId}",
+    "userPasswd":"${#TestCase#userPasswd}",
+    "userName":"${#TestCase#userName}",
+    "userAuth": "${#TestCase#userAuth}"
 }
-</con:request><con:originalUri>http://localhost/api/templet/selectSample</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="472b8c71-f4a6-4067-8c64-b1f20e73cb3d" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script" id="c2a37d4f-b12b-435f-ac50-dbecc109c9ec"><con:settings/><con:config><script>//import com.example.utils.MyCustomHelper 
+</con:request><con:originalUri>http://localhost/api/templet/selectSample</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="472b8c71-f4a6-4067-8c64-b1f20e73cb3d" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="JsonPath RegEx Match" id="2204a37a-f79e-4dd5-9151-96b9ae783945" name="JsonPath RegEx Match"><con:configuration><path>$.code</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments><regEx>0000</regEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script" id="c2a37d4f-b12b-435f-ac50-dbecc109c9ec" disabled="true"><con:settings/><con:config><script>//import com.example.utils.MyCustomHelper 
 //import org.apache.commons.lang3.RandomStringUtils // 예시: Apache Commons 사용 시
 
 // 2. 객체 생성 및 메서드 사용
@@ -197,4 +256,315 @@ log.info "숫자문자열: " + numeric
 
 // 4. 지정한 문자 범위 내에서 생성 (예: 'abc' 중에서만 5자리)
 def custom = RandomStringUtils.random(5, "abcdef")
-log.info "커스텀문자: " + custom</script></con:config></con:testStep><con:properties><con:property><con:name>userId</con:name><con:value>3ucCNAkC9j</con:value></con:property><con:property><con:name>userPasswd</con:name><con:value>ABC12345</con:value></con:property><con:property><con:name>userName</con:name><con:value>ABC12345</con:value></con:property><con:property><con:name>userAuth</con:name><con:value>user</con:value></con:property><con:property><con:name>jwtToken</con:name><con:value>eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzdWNDTkFrQzlqIiwiand0VXNlcklkIjoiM3VjQ05Ba0M5aiIsImp3dFVzZXJBdXRoIjoidXNlciIsImlhdCI6MTc2ODQyNjM2MywiZXhwIjoxNzY4NDI2NjAzfQ.tsiLzTsLDKgA_7LoQByGan4u3caRTyRqwaH6lWrf57Nslm9pIhuRqHysQIngD-lM1_uOu8K0ifI0I3qXO2b6cg</con:value></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
+log.info "커스텀문자: " + custom</script></con:config></con:testStep><con:loadTest id="7106b5e8-c557-4d49-9542-d94ebd81a0cd" name="LoadTest 1"><con:settings/><con:threadCount>10</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>60</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Thread</con:type><con:config><startThreadCount>3</startThreadCount><endThreadCount>10</endThreadCount></con:config></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:properties><con:property><con:name>userId</con:name><con:value>eF9JJ9tiFR</con:value></con:property><con:property><con:name>userPasswd</con:name><con:value>ABC12345</con:value></con:property><con:property><con:name>userName</con:name><con:value>ABC12345</con:value></con:property><con:property><con:name>userAuth</con:name><con:value>user</con:value></con:property><con:property><con:name>jwtToken</con:name><con:value>eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJlRjlKSjl0aUZSIiwiand0VXNlcklkIjoiZUY5Sko5dGlGUiIsImp3dFVzZXJBdXRoIjoidXNlciIsImlhdCI6MTc2ODU3MDMzOSwiZXhwIjoxNzY4NTcwNTc5fQ.Vn73KP09IDNwrzTiCrx6FSszg7n-aqdplvXvMIm0i0guGQKYIa-OIxuONrSatfIfhYvfGNtxH4A5bFWbe1dm_Q</con:value></con:property></con:properties></con:testCase><con:testCase id="801aecc6-eff1-4c5c-adce-3f1858df651e" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="등록 및 reFreshToken" searchProperties="true"><con:settings/><con:testStep type="groovy" name="init" id="ec6af4c8-404a-4c7b-aacb-70cd6863a1a5"><con:settings/><con:config><script>import com.eviware.soapui.SoapUI
+import org.apache.commons.lang.RandomStringUtils
+
+// 1. Global Property 설정 (값 쓰기)
+// 다른 테스트  스텝에 사용하기 위해
+def userId = RandomStringUtils.randomAlphanumeric(10)
+def userPasswd = "ABC12345"
+def userName = "ABC12345"
+def userAuth = "user"
+
+// 전역 변수 설정
+SoapUI.globalProperties.setPropertyValue("userId", userId)
+SoapUI.globalProperties.setPropertyValue("userPasswd", userPasswd)
+SoapUI.globalProperties.setPropertyValue("userName", userName)
+SoapUI.globalProperties.setPropertyValue("userAuth", userAuth)
+
+// testCase 변수 설정
+//testRunner.testCase.getTestStepByName('insertUser').setPropertyValue("userId",userId)
+//testRunner.testCase.getTestStepByName('insertUser').setPropertyValue("userPasswd",userPasswd)
+//testRunner.testCase.getTestStepByName('insertUser').setPropertyValue("userName",userName)
+//testRunner.testCase.getTestStepByName('insertUser').setPropertyValue("userAuth",userAuth)
+testRunner.testCase.setPropertyValue("userId",userId)
+testRunner.testCase.setPropertyValue("userPasswd",userPasswd)
+testRunner.testCase.setPropertyValue("userName",userName)
+testRunner.testCase.setPropertyValue("userAuth",userAuth)
+</script></con:config></con:testStep><con:testStep type="restrequest" name="insertUser" id="8fff6242-f88f-47bd-9f8d-f84872a0f477"><con:settings/><con:config service="http://localhost:8010" resourcePath="/api/unAuth/insertUser" methodName="insertUser" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="insertUser" id="ab101f41-a57b-4d25-99ca-dffdeaa617aa" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8010</con:endpoint><con:request>{ 
+   "userId":"${#TestCase#userId}",
+    "userPasswd":"${#TestCase#userPasswd}",
+    "userName":"${#TestCase#userName}",
+    "userAuth": "${#TestCase#userAuth}"
+}
+</con:request><con:originalUri>http://localhost/api/templet/selectSample</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="fd7e26a9-dd1c-454e-b461-69f84ca13fb5" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="JsonPath Existence Match" id="52b82e81-8253-4897-808e-2991a51f9b72" name="JsonPath Existence Match"><con:configuration><path>$.code</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="Simple Contains" id="0ab01285-c390-4cc1-a616-8bdae07edb0c" name="Contains"><con:configuration><token>"0000"</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="JsonPath RegEx Match" id="ac9c5b3a-374e-4f0d-985a-66b5e824d232" name="JsonPath RegEx Match"><con:configuration><path>$.code</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments><regEx>0000</regEx></con:configuration></con:assertion><con:credentials><con:username>ABC12345</con:username><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="initGetJwtToken" id="f74282fd-fc5e-4a8d-ad69-ad40a9fa4b13"><con:settings/><con:config><script>import groovy.json.JsonSlurper
+import com.eviware.soapui.SoapUI
+
+def userId = SoapUI.globalProperties.getPropertyValue("userId")
+def userPasswd = SoapUI.globalProperties.getPropertyValue("userPasswd")
+def userName = SoapUI.globalProperties.getPropertyValue("userName")
+def userAuth = SoapUI.globalProperties.getPropertyValue("userAuth")
+
+testRunner.testCase.setPropertyValue("userId",userId)
+testRunner.testCase.setPropertyValue("userPasswd",userPasswd)
+testRunner.testCase.setPropertyValue("userName",userName)
+testRunner.testCase.setPropertyValue("userAuth",userAuth)</script></con:config></con:testStep><con:testStep type="restrequest" name="getJwtToken" id="f1fdc512-5e7b-4ea3-94b9-a2f0ee0bb567"><con:settings/><con:config service="http://localhost:8010" resourcePath="/api/token/getJwtToken" methodName="getJwtToken" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="getJwtToken" id="ad8ce46c-28a2-4eba-8de2-5814b2728543" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8010</con:endpoint><con:request>{ 
+   "userId":"${#TestCase#userId}",
+    "userPasswd":"${#TestCase#userPasswd}"
+}
+</con:request><con:originalUri>http://localhost/api//templet/select</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="e7c67d85-c49d-4dce-88c2-d04ca7067b89" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="JsonPath RegEx Match" id="1367cd0b-03f0-4c64-9fa9-d47ac2539fd9" name="JsonPath RegEx Match"><con:configuration><path>$.code</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments><regEx>0000</regEx></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="initSelectUser" id="f103de2b-734b-4149-a123-350f42f27028"><con:settings/><con:config><script>import groovy.json.JsonSlurper
+import com.eviware.soapui.SoapUI
+
+def jsonSlurper = new JsonSlurper()
+def userId = SoapUI.globalProperties.getPropertyValue("userId")
+def userPasswd = SoapUI.globalProperties.getPropertyValue("userPasswd")
+def userName = SoapUI.globalProperties.getPropertyValue("userName")
+def userAuth = SoapUI.globalProperties.getPropertyValue("userAuth")
+
+// getJwtToken 테스트 Case에서 jwtToken 가져오기
+def response  = jsonSlurper.parseText( context.expand('${getJwtToken#Response}'))
+
+testRunner.testCase.setPropertyValue("userId",userId)
+testRunner.testCase.setPropertyValue("userPasswd",userPasswd)
+testRunner.testCase.setPropertyValue("userName",userName)
+testRunner.testCase.setPropertyValue("userAuth",userAuth)
+testRunner.testCase.setPropertyValue("jwtToken",response.jwtToken)
+
+
+// 1. 이전 REST 요청 테스트 단계 가져오기
+// "REST Request Step Name" 부분을 실제 REST 요청 단계 이름으로 변경하세요.
+//def restRequestStep = testRunner.testCase.getTestStepByName("getJwtToken")
+//def httpResponse = restRequestStep.httpRequest.messageExchange
+
+// 2. HTTP 응답 상태 코드 가져오기
+//def statusCode = httpResponse.responseStatusCode
+//log.info("Status Code: " + statusCode)
+
+// 3. 상태 코드 검증 (Assertion)
+//assert statusCode == 200 : "예상치 못한 상태 코드: " + statusCode
+
+// 4. 응답 본문(JSON) 가져오기
+//def responseContent = httpResponse.responseContent
+//log.info("Response Content: " + responseContent)
+
+// 5. JSON 응답 파싱 및 데이터 검증
+
+
+//def jsonResponse = jsonSlurper.parseText(responseContent)
+
+// JSON 데이터 내의 특정 필드 값 검증 (예: "status" 필드가 "success"인지 확인)
+//assert jsonResponse.status == "success" : "잘못된 응답 상태: " + jsonResponse.status
+//def jwtToken = null
+//if ( jsonResponse.code == "0000") {
+//	jwtToken =  jsonResponse.jwtToken
+//log.info("Response jwtToken: " + jsonResponse.jwtToken)
+//} 
+//log.info(" jwtToken: " + jwtToken)
+
+// 6. 응답 데이터(예: ID)를 다음 테스트 단계에서 사용하기 위해 컨텍스트(context)에 저장
+//context.setProperty("jwtToken", jsonResponse.data.id)
+
+
+// 1. 대상이 되는 Test Step 찾기
+//def requestStep = testRunner.testCase.getTestStepByName("나의_API_이름")
+
+// 2. 기존 헤더 목록 가져오기 (없으면 새로 생성)
+//def headers = requestStep.httpRequest.requestHeaders
+
+// 3. 헤더 추가 (List 형태로 넣어야 함에 유의)
+//headers.put("jwtToken", ["Bearer my_secret_token"])
+//headers.put("Custom-Header", ["SoapUI-Groovy-Test"])
+
+// 4. 변경된 헤더를 다시 설정
+//requestStep.httpRequest.requestHeaders = headers
+
+log.info "헤더 설정 완료"</script></con:config></con:testStep><con:testStep type="restrequest" name="selectUser" id="2dc6fcc3-f615-4ad2-ae69-1b908e7a7d7b"><con:settings/><con:config service="http://localhost:8010" resourcePath="/api/user/selectUser" methodName="selectUser" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="selectUser" id="ab101f41-a57b-4d25-99ca-dffdeaa617aa" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="jwtToken" value="${#TestCase#jwtToken}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:8010</con:endpoint><con:request>{ 
+   "userId":"${#TestCase#userId}"
+}
+</con:request><con:originalUri>http://localhost/api/templet/selectSample</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="6bdae364-2641-4449-9340-081f4584c46e" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="JsonPath RegEx Match" id="7f2ebd93-fb85-4e22-9833-4d8adf580c4b" name="JsonPath RegEx Match"><con:configuration><path>$.code</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments><regEx>0000</regEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="initGetRefreshToken" id="250f6fbe-8d29-41f6-853b-46d32384c331"><con:settings/><con:config><script>import groovy.json.JsonSlurper
+import com.eviware.soapui.SoapUI
+sleep(240000)
+def jsonSlurper = new JsonSlurper()
+def userId = SoapUI.globalProperties.getPropertyValue("userId")
+def userPasswd = SoapUI.globalProperties.getPropertyValue("userPasswd")
+def userName = SoapUI.globalProperties.getPropertyValue("userName")
+def userAuth = SoapUI.globalProperties.getPropertyValue("userAuth")
+
+// getJwtToken 테스트 Case에서 jwtToken 가져오기
+def response  = jsonSlurper.parseText( context.expand('${getJwtToken#Response}'))
+
+testRunner.testCase.setPropertyValue("userId",userId)
+testRunner.testCase.setPropertyValue("userPasswd",userPasswd)
+testRunner.testCase.setPropertyValue("userName",userName)
+testRunner.testCase.setPropertyValue("userAuth",userAuth)
+testRunner.testCase.setPropertyValue("jwtToken",response.jwtToken)
+</script></con:config></con:testStep><con:testStep type="restrequest" name="getRefreshToken" id="1f2f7041-55ec-4570-a821-c7b3b86ca1eb"><con:settings/><con:config service="http://localhost:8010" resourcePath="/api/token/getRefreshToken" methodName="getRefreshToken" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="getRefreshToken" id="ad8ce46c-28a2-4eba-8de2-5814b2728543" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8010</con:endpoint><con:request>{ 
+   "userId":"${#TestCase#userId}",
+    "jwtToken": "${#TestCase#jwtToken}"
+}
+</con:request><con:originalUri>http://localhost/api//templet/select</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="e0f7faa7-c001-43d8-9238-71c25d8a23ab" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="JsonPath RegEx Match" id="4395d030-53c7-4644-b369-427db5a4a0e8" name="JsonPath RegEx Match"><con:configuration><path>$.code</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments><regEx>0000</regEx></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>userId</con:name><con:value>eF9JJ9tiFR</con:value></con:property><con:property><con:name>userPasswd</con:name><con:value>ABC12345</con:value></con:property><con:property><con:name>userName</con:name><con:value>ABC12345</con:value></con:property><con:property><con:name>userAuth</con:name><con:value>user</con:value></con:property><con:property><con:name>jwtToken</con:name><con:value>eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0emszSkxHYUJLIiwiand0VXNlcklkIjoidHprM0pMR2FCSyIsImp3dFVzZXJBdXRoIjoidXNlciIsImlhdCI6MTc2ODU2ODE0OSwiZXhwIjoxNzY4NTY4Mzg5fQ.xRx-2hhR_iMG7MGpU9TEycI1TdtVO5d9ajsoH1WtAsK_6ERhXJB9VhEtdxqfDf73H4ZDAKoK1ddq651Zumj_bA</con:value></con:property></con:properties></con:testCase><con:testCase id="816e80e0-17e3-40c1-b2ac-75023d9182b2" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="등록 및 수정 reFreshToken 삭제" searchProperties="true"><con:settings/><con:testStep type="groovy" name="init" id="0ba4aa83-e05d-47e2-9033-e03d087cb7d3"><con:settings/><con:config><script>import com.eviware.soapui.SoapUI
+import org.apache.commons.lang.RandomStringUtils
+
+// 1. Global Property 설정 (값 쓰기)
+// 다른 테스트  스텝에 사용하기 위해
+def userId = RandomStringUtils.randomAlphanumeric(10)
+def userPasswd = "ABC12345"
+def userName = "ABC12345"
+def userAuth = "user"
+
+// 전역 변수 설정
+SoapUI.globalProperties.setPropertyValue("userId", userId)
+SoapUI.globalProperties.setPropertyValue("userPasswd", userPasswd)
+SoapUI.globalProperties.setPropertyValue("userName", userName)
+SoapUI.globalProperties.setPropertyValue("userAuth", userAuth)
+
+// testCase 변수 설정
+//testRunner.testCase.getTestStepByName('insertUser').setPropertyValue("userId",userId)
+//testRunner.testCase.getTestStepByName('insertUser').setPropertyValue("userPasswd",userPasswd)
+//testRunner.testCase.getTestStepByName('insertUser').setPropertyValue("userName",userName)
+//testRunner.testCase.getTestStepByName('insertUser').setPropertyValue("userAuth",userAuth)
+testRunner.testCase.setPropertyValue("userId",userId)
+testRunner.testCase.setPropertyValue("userPasswd",userPasswd)
+testRunner.testCase.setPropertyValue("userName",userName)
+testRunner.testCase.setPropertyValue("userAuth",userAuth)
+</script></con:config></con:testStep><con:testStep type="restrequest" name="insertUser" id="7c3c6b76-025a-4753-ad75-57717d5e530c"><con:settings/><con:config service="http://localhost:8010" resourcePath="/api/unAuth/insertUser" methodName="insertUser" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="insertUser" id="ab101f41-a57b-4d25-99ca-dffdeaa617aa" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8010</con:endpoint><con:request>{ 
+   "userId":"${#TestCase#userId}",
+    "userPasswd":"${#TestCase#userPasswd}",
+    "userName":"${#TestCase#userName}",
+    "userAuth": "${#TestCase#userAuth}"
+}
+</con:request><con:originalUri>http://localhost/api/templet/selectSample</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="fd7e26a9-dd1c-454e-b461-69f84ca13fb5" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="JsonPath Existence Match" id="52b82e81-8253-4897-808e-2991a51f9b72" name="JsonPath Existence Match"><con:configuration><path>$.code</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="Simple Contains" id="0ab01285-c390-4cc1-a616-8bdae07edb0c" name="Contains"><con:configuration><token>"0000"</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="JsonPath RegEx Match" id="ac9c5b3a-374e-4f0d-985a-66b5e824d232" name="JsonPath RegEx Match"><con:configuration><path>$.code</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments><regEx>0000</regEx></con:configuration></con:assertion><con:credentials><con:username>ABC12345</con:username><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="initGetJwtToken" id="095ee7ac-1649-4428-bdbd-b9104ae50e2e"><con:settings/><con:config><script>import groovy.json.JsonSlurper
+import com.eviware.soapui.SoapUI
+
+def userId = SoapUI.globalProperties.getPropertyValue("userId")
+def userPasswd = SoapUI.globalProperties.getPropertyValue("userPasswd")
+def userName = SoapUI.globalProperties.getPropertyValue("userName")
+def userAuth = SoapUI.globalProperties.getPropertyValue("userAuth")
+
+testRunner.testCase.setPropertyValue("userId",userId)
+testRunner.testCase.setPropertyValue("userPasswd",userPasswd)
+testRunner.testCase.setPropertyValue("userName",userName)
+testRunner.testCase.setPropertyValue("userAuth",userAuth)</script></con:config></con:testStep><con:testStep type="restrequest" name="getJwtToken" id="69d7ce54-4876-4be7-8709-80a0d8a835fc"><con:settings/><con:config service="http://localhost:8010" resourcePath="/api/token/getJwtToken" methodName="getJwtToken" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="getJwtToken" id="ad8ce46c-28a2-4eba-8de2-5814b2728543" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8010</con:endpoint><con:request>{ 
+   "userId":"${#TestCase#userId}",
+    "userPasswd":"${#TestCase#userPasswd}"
+}
+</con:request><con:originalUri>http://localhost/api//templet/select</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="e7c67d85-c49d-4dce-88c2-d04ca7067b89" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="JsonPath RegEx Match" id="1367cd0b-03f0-4c64-9fa9-d47ac2539fd9" name="JsonPath RegEx Match"><con:configuration><path>$.code</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments><regEx>0000</regEx></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="initSelectUser" id="11f3655b-e4cf-4f2e-ac79-8e9c222f3e1a"><con:settings/><con:config><script>import groovy.json.JsonSlurper
+import com.eviware.soapui.SoapUI
+
+def jsonSlurper = new JsonSlurper()
+def userId = SoapUI.globalProperties.getPropertyValue("userId")
+def userPasswd = SoapUI.globalProperties.getPropertyValue("userPasswd")
+def userName = SoapUI.globalProperties.getPropertyValue("userName")
+def userAuth = SoapUI.globalProperties.getPropertyValue("userAuth")
+
+// getJwtToken 테스트 Case에서 jwtToken 가져오기
+def response  = jsonSlurper.parseText( context.expand('${getJwtToken#Response}'))
+
+testRunner.testCase.setPropertyValue("userId",userId)
+testRunner.testCase.setPropertyValue("userPasswd",userPasswd)
+testRunner.testCase.setPropertyValue("userName",userName)
+testRunner.testCase.setPropertyValue("userAuth",userAuth)
+testRunner.testCase.setPropertyValue("jwtToken",response.jwtToken)
+
+// 1. 이전 REST 요청 테스트 단계 가져오기
+// "REST Request Step Name" 부분을 실제 REST 요청 단계 이름으로 변경하세요.
+//def restRequestStep = testRunner.testCase.getTestStepByName("getJwtToken")
+//def httpResponse = restRequestStep.httpRequest.messageExchange
+
+// 2. HTTP 응답 상태 코드 가져오기
+//def statusCode = httpResponse.responseStatusCode
+//log.info("Status Code: " + statusCode)
+
+// 3. 상태 코드 검증 (Assertion)
+//assert statusCode == 200 : "예상치 못한 상태 코드: " + statusCode
+
+// 4. 응답 본문(JSON) 가져오기
+//def responseContent = httpResponse.responseContent
+//log.info("Response Content: " + responseContent)
+
+// 5. JSON 응답 파싱 및 데이터 검증
+
+
+//def jsonResponse = jsonSlurper.parseText(responseContent)
+
+// JSON 데이터 내의 특정 필드 값 검증 (예: "status" 필드가 "success"인지 확인)
+//assert jsonResponse.status == "success" : "잘못된 응답 상태: " + jsonResponse.status
+//def jwtToken = null
+//if ( jsonResponse.code == "0000") {
+//	jwtToken =  jsonResponse.jwtToken
+//log.info("Response jwtToken: " + jsonResponse.jwtToken)
+//} 
+//log.info(" jwtToken: " + jwtToken)
+
+// 6. 응답 데이터(예: ID)를 다음 테스트 단계에서 사용하기 위해 컨텍스트(context)에 저장
+//context.setProperty("jwtToken", jsonResponse.data.id)
+
+
+// 1. 대상이 되는 Test Step 찾기
+//def requestStep = testRunner.testCase.getTestStepByName("나의_API_이름")
+
+// 2. 기존 헤더 목록 가져오기 (없으면 새로 생성)
+//def headers = requestStep.httpRequest.requestHeaders
+
+// 3. 헤더 추가 (List 형태로 넣어야 함에 유의)
+//headers.put("jwtToken", ["Bearer my_secret_token"])
+//headers.put("Custom-Header", ["SoapUI-Groovy-Test"])
+
+// 4. 변경된 헤더를 다시 설정
+//requestStep.httpRequest.requestHeaders = headers
+
+log.info "헤더 설정 완료"</script></con:config></con:testStep><con:testStep type="restrequest" name="selectUser" id="18ecb20d-961a-44b0-be1d-176b7ea6ebaa"><con:settings/><con:config service="http://localhost:8010" resourcePath="/api/user/selectUser" methodName="selectUser" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="selectUser" id="ab101f41-a57b-4d25-99ca-dffdeaa617aa" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="jwtToken" value="${#TestCase#jwtToken}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:8010</con:endpoint><con:request>{ 
+   "userId":"${#TestCase#userId}"
+}
+</con:request><con:originalUri>http://localhost/api/templet/selectSample</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="6bdae364-2641-4449-9340-081f4584c46e" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="JsonPath RegEx Match" id="7f2ebd93-fb85-4e22-9833-4d8adf580c4b" name="JsonPath RegEx Match"><con:configuration><path>$.code</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments><regEx>0000</regEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="initUpdateUser" id="0f18a1d2-70d1-4eff-b825-07d08985ae88"><con:settings/><con:config><script>import groovy.json.JsonSlurper
+import com.eviware.soapui.SoapUI
+
+def jsonSlurper = new JsonSlurper()
+def userId = SoapUI.globalProperties.getPropertyValue("userId")
+def userPasswd = SoapUI.globalProperties.getPropertyValue("userPasswd")
+def userName = SoapUI.globalProperties.getPropertyValue("userName")
+def userAuth = SoapUI.globalProperties.getPropertyValue("userAuth")
+
+// getJwtToken 테스트 Case에서 jwtToken 가져오기
+def response  = jsonSlurper.parseText( context.expand('${getJwtToken#Response}'))
+
+testRunner.testCase.setPropertyValue("userId",userId)
+testRunner.testCase.setPropertyValue("userPasswd",userPasswd)
+testRunner.testCase.setPropertyValue("userName",userName)
+testRunner.testCase.setPropertyValue("userAuth",userAuth)
+testRunner.testCase.setPropertyValue("jwtToken",response.jwtToken)
+</script></con:config></con:testStep><con:testStep type="restrequest" name="updateUser" id="bb1422f1-715d-47b4-834f-b28a932c1803"><con:settings/><con:config service="http://localhost:8010" resourcePath="/api/user/updateUser" methodName="updateUser" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="updateUser" id="ab101f41-a57b-4d25-99ca-dffdeaa617aa" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="jwtToken" value="${#TestCase#jwtToken}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:8010</con:endpoint><con:request>{ 
+   "userId":"${#TestCase#userId}",
+    "userPasswd":"${#TestCase#userPasswd}",
+    "userName":"${#TestCase#userName}",
+    "userAuth": "${#TestCase#userAuth}"
+}</con:request><con:originalUri>http://localhost/api/templet/selectSample</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="e87380a4-3e59-400f-9801-58c2ef158b3e" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="JsonPath RegEx Match" id="780787f0-62b0-48c9-9bd8-daac94315c1b" name="JsonPath RegEx Match"><con:configuration><path>$.code</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments><regEx>0000</regEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="initGetRefreshToken" id="c4566dde-5449-4fb9-bfd0-2ebfe3f1fa4c"><con:settings/><con:config><script>import groovy.json.JsonSlurper
+import com.eviware.soapui.SoapUI
+sleep(240000)
+def jsonSlurper = new JsonSlurper()
+def userId = SoapUI.globalProperties.getPropertyValue("userId")
+def userPasswd = SoapUI.globalProperties.getPropertyValue("userPasswd")
+def userName = SoapUI.globalProperties.getPropertyValue("userName")
+def userAuth = SoapUI.globalProperties.getPropertyValue("userAuth")
+
+// getJwtToken 테스트 Case에서 jwtToken 가져오기
+def response  = jsonSlurper.parseText( context.expand('${getJwtToken#Response}'))
+
+testRunner.testCase.setPropertyValue("userId",userId)
+testRunner.testCase.setPropertyValue("userPasswd",userPasswd)
+testRunner.testCase.setPropertyValue("userName",userName)
+testRunner.testCase.setPropertyValue("userAuth",userAuth)
+testRunner.testCase.setPropertyValue("jwtToken",response.jwtToken)
+</script></con:config></con:testStep><con:testStep type="restrequest" name="getRefreshToken" id="1cb691dd-b072-4dad-88fa-11e502e30109"><con:settings/><con:config service="http://localhost:8010" resourcePath="/api/token/getRefreshToken" methodName="getRefreshToken" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="getRefreshToken" id="ad8ce46c-28a2-4eba-8de2-5814b2728543" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8010</con:endpoint><con:request>{ 
+   "userId":"${#TestCase#userId}",
+    "jwtToken": "${#TestCase#jwtToken}"
+}
+</con:request><con:originalUri>http://localhost/api//templet/select</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="e0f7faa7-c001-43d8-9238-71c25d8a23ab" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="JsonPath RegEx Match" id="98548e26-4759-47ca-8e66-a29b6d1578da" name="JsonPath RegEx Match"><con:configuration><path>$.code</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments><regEx>0000</regEx></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="initDeleteUser" id="021008e2-6f2a-4258-926a-1896863fc9dc"><con:settings/><con:config><script>import groovy.json.JsonSlurper
+import com.eviware.soapui.SoapUI
+
+def jsonSlurper = new JsonSlurper()
+def userId = SoapUI.globalProperties.getPropertyValue("userId")
+def userPasswd = SoapUI.globalProperties.getPropertyValue("userPasswd")
+def userName = SoapUI.globalProperties.getPropertyValue("userName")
+def userAuth = SoapUI.globalProperties.getPropertyValue("userAuth")
+
+def response  = jsonSlurper.parseText( context.expand('${getRefreshToken#Response}'))
+
+testRunner.testCase.setPropertyValue("userId",userId)
+testRunner.testCase.setPropertyValue("userPasswd",userPasswd)
+testRunner.testCase.setPropertyValue("userName",userName)
+testRunner.testCase.setPropertyValue("userAuth",userAuth)
+testRunner.testCase.setPropertyValue("jwtToken",response.jwtToken)</script></con:config></con:testStep><con:testStep type="restrequest" name="deleteUser" id="138df4d9-bd00-4e78-945d-eb3b69b5b568"><con:settings/><con:config service="http://localhost:8010" resourcePath="/api/user/deleteUser" methodName="deleteUser" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="deleteUser" id="ab101f41-a57b-4d25-99ca-dffdeaa617aa" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="jwtToken" value="${#TestCase#jwtToken}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:8010</con:endpoint><con:request>{ 
+   "userId":"${#TestCase#userId}"
+}
+</con:request><con:originalUri>http://localhost/api/templet/selectSample</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="e9a5b330-c601-4fdc-9d0e-76408c966cd8" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>userId</con:name><con:value>qxSpKvH46a</con:value></con:property><con:property><con:name>userPasswd</con:name><con:value>ABC12345</con:value></con:property><con:property><con:name>userName</con:name><con:value>ABC12345</con:value></con:property><con:property><con:name>userAuth</con:name><con:value>user</con:value></con:property><con:property><con:name>jwtToken</con:name><con:value>eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJxeFNwS3ZINDZhIiwiand0VXNlcklkIjoicXhTcEt2SDQ2YSIsImp3dFVzZXJBdXRoIjoidXNlciIsImlhdCI6MTc2ODU3NDQ1NiwiZXhwIjoxNzY4NTc0Njk2fQ.GGwnowNA2_rofpSBkxHIGoj9kXB0VtB47oaLpR_Xv3dkGE51NAhHQaEmQPE8yvOx-oweuxXAYBXwjYcxg3rQZQ</con:value></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

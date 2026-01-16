@@ -62,7 +62,8 @@ public class JwtServiceImpl implements JwtService {
 	
 			jwtToken = JwtTokenUtil.generateToken(jwtTokenReqVo.getUserId(), (String)rtnMap.get("userAuth"), jwtExpTime,date);
 			Map<String,Object> dataMap = new HashMap<String,Object>();
-		    dataMap.put("userAuth",rtnMap.get("userAuth"));
+		    dataMap.put("userId",rtnMap.get("userId"));
+			dataMap.put("userAuth",rtnMap.get("userAuth"));
 		    dataMap.put("jwtToken",jwtToken);
 		    dataMap.put("jwtStrTime", date);
 		    dataMap.put("jwtExpTime",date + jwtExpTime *60*1000);
@@ -122,6 +123,7 @@ public class JwtServiceImpl implements JwtService {
 			// userAuth는 그냥 overWrite 업무에 달라 달라지니...
 			jwtToken = JwtTokenUtil.generateToken(refreshTokenReqVo.getUserId(), (String)rtnMap.get("userAuth"), jwtExpTime,date);
 			Map<String,Object> dataMap = new HashMap<String,Object>();
+		    dataMap.put("userId",rtnMap.get("userId"));
 		    dataMap.put("userAuth",rtnMap.get("userAuth"));
 		    dataMap.put("jwtToken",jwtToken);
 		    dataMap.put("jwtStrTime",date);

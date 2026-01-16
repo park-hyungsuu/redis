@@ -1,7 +1,10 @@
 package com.hyungsuu.apigate.samaple.service.impl;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -13,6 +16,8 @@ import com.hyungsuu.apigate.samaple.service.UserService;
 import com.hyungsuu.apigate.samaple.vo.UserReqVo;
 import com.hyungsuu.apigate.samaple.vo.UserResVo;
 import com.hyungsuu.common.exception.GlobalException;
+import com.hyungsuu.common.util.JwtTokenUtil;
+
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -26,6 +31,7 @@ public class UserServiceImpl implements UserService {
 	@Autowired
     private CommonDAO commonDAO;
 
+	@Autowired
 	private RedisTemplate<String, Object> redisTemplate;
 	@Override
 	public UserResVo selectUser(HashMap<String, Object> userMap) throws Exception {
@@ -85,7 +91,15 @@ public class UserServiceImpl implements UserService {
 			log.info("GlobalException ==>" +"||"+e.getMessage() +"||"+e.toString() );
 			throw e;
 		}
-	
+		log.info("GlobalException ==>" +redisTemplate.opsForHash().size("JwtToken:"+userReqVo.getUserId()));
+		if ( redisTemplate.opsForHash().size("JwtToken:"+userReqVo.getUserId()) >0) {
+
+			Map<String,Object> dataMap = new HashMap<String,Object>();
+		    dataMap.put("userId",userReqVo.getUserId());
+		    dataMap.put("userAuth",userReqVo.getUserAuth());
+		    log.info("1redisTemplate ==>" +redisTemplate.opsForHash().entries("JwtToken:"+userReqVo.getUserId()).toString());
+			redisTemplate.opsForHash().putAll("JwtToken:"+userReqVo.getUserId(), dataMap);
+		}
 		return rtnMap;
 	}
 
@@ -107,7 +121,9 @@ public class UserServiceImpl implements UserService {
 			log.info("GlobalException ==>" +"||"+e.getMessage() +"||"+e.toString() );
 			throw e;
 		}
-	
+
+		redisTemplate.delete("JwtToken:"+userMap.get("userId"));
+
 		return rtnMap;
 	}
 
