@@ -3,8 +3,9 @@ CREATE TABLE `user` (
 	`user_passwd` VARCHAR(20) NOT NULL COMMENT '사용자 암호' COLLATE 'utf8mb4_general_ci',
 	`user_auth` VARCHAR(10) NOT NULL COMMENT '사용자 권한' COLLATE 'utf8mb4_general_ci',
 	`user_name` VARCHAR(20) NOT NULL COMMENT '사용자 이름' COLLATE 'utf8mb4_general_ci',
-	`reg_date` DATETIME NOT NULL DEFAULT current_timestamp() COMMENT '등록일',
-	PRIMARY KEY (`user_id`)
+	`reg_date` DATETIME NULL DEFAULT current_timestamp() COMMENT '등록일',
+	`upd_date` DATETIME NULL DEFAULT NULL COMMENT '수정일',
+	PRIMARY KEY (`user_id`) USING BTREE
 )
 COMMENT='사용자 테이블'
 COLLATE='utf8mb4_general_ci'

@@ -1,5 +1,5 @@
-# Redis
-redis 설치
+# Redis 설치
+
 
 참조 URL
 
