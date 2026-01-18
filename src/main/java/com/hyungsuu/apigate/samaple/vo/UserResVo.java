@@ -1,11 +1,15 @@
 package com.hyungsuu.apigate.samaple.vo;
 
 import java.io.Serializable;
+
+import org.apache.ibatis.type.Alias;
+
 import com.hyungsuu.common.vo.BaseResponseVo;
 import lombok.Data;
 
 @SuppressWarnings("serial")
 @Data
+@Alias("userResVo")
 public class UserResVo extends BaseResponseVo implements Serializable {
 	
 

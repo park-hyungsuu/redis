@@ -21,6 +21,7 @@ public class DatabaseConfig {
 	public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception {
 		SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
 		sqlSessionFactoryBean.setDataSource(dataSource);
+		sqlSessionFactoryBean.setTypeAliasesPackage("com.hyungsuu.apigate.samaple.vo");
 		sqlSessionFactoryBean
 				.setConfigLocation(applicationContext.getResource("classpath:/ecid/mapper/config/mapper-config.xml"));
 

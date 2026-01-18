@@ -2,6 +2,8 @@ package com.hyungsuu.apigate.samaple.vo;
 
 import java.io.Serializable;
 
+import org.apache.ibatis.type.Alias;
+
 import com.hyungsuu.common.vo.BaseResponseVo;
 
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -10,6 +12,7 @@ import lombok.Data;
 
 @SuppressWarnings("serial")
 @Data
+@Alias("jwtTokenResVo")
 @Schema(description = "Jwt 토큰 응답 Vo")
 public class JwtTokenResVo extends BaseResponseVo implements Serializable {
 

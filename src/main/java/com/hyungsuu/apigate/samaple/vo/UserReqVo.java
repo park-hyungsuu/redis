@@ -3,6 +3,8 @@ package com.hyungsuu.apigate.samaple.vo;
 import java.io.Serializable;
 import java.sql.Date;
 
+import org.apache.ibatis.type.Alias;
+
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -11,6 +13,7 @@ import lombok.Data;
 
 @SuppressWarnings("serial")
 @Data
+@Alias("userReqVo")
 @Schema(description = "샘플 조회 API")
 public class UserReqVo implements Serializable {
 	

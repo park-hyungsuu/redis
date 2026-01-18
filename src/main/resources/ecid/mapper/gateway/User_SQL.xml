@@ -8,11 +8,11 @@
 	<select id="selectUser" parameterType="userReqVo"
 		resultType="hashMap">
 		SELECT
-		user_id as "userId"
-		, user_passwd as "userPasswd"
-		, user_auth as "userAuth"
-		, user_name as "userName"
-		, reg_date as "regDate"
+		user_id 
+		, user_passwd
+		, user_auth 
+		, user_name 
+		, reg_date
 		FROM
 		user
 		WHERE
@@ -22,11 +22,11 @@
 	<select id="selectUserAndPass" parameterType="JwtTokenReqVo"
 		resultType="hashMap">
 		SELECT
-		user_id as "userId"
-		, user_passwd as "userPasswd"
-		, user_auth as "userAuth"
-		, user_name as "userName"
-		, reg_date as "regDate"
+		user_id
+		, user_passwd
+		, user_auth
+		, user_name
+		, reg_date
 		FROM
 		user
 		WHERE
@@ -74,11 +74,11 @@
 	
 	  <select id="selectUserPage" parameterType="hashmap" resultType="hashmap">
  		SELECT
-		user_id as "userId"
-		, user_passwd as "userPasswd"
-		, user_auth as "userAuth"
-		, user_name as "userName"
-		, reg_date as "regDate"
+		user_id 
+		, user_passwd
+		, user_auth 
+		, user_name 
+		, reg_date 
 		FROM
 		user
 		
