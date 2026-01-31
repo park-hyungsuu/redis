@@ -45,7 +45,7 @@ public class JwtServiceImpl implements JwtService {
 		}
 
 		// 데이타가 없는 경우
-		if (rtnMap.size() < 1) {
+		if (rtnMap == null) {
 			throw new GlobalException("600", "aaaa");
 		}
 		JwtTokenResVo jwtTokenResVo = new JwtTokenResVo();
@@ -107,7 +107,7 @@ public class JwtServiceImpl implements JwtService {
 		}
 
 		// 데이타가 없는 경우
-		if (rtnMap.size() < 1) {
+		if (rtnMap == null) {
 			throw new GlobalException("600", "aaaa");
 		}
 		JwtTokenResVo jwtTokenResVo = new JwtTokenResVo();

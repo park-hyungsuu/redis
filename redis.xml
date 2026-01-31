@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="fae6782d-40a4-4288-8f89-568c83a7e26a" activeEnvironment="Default" name="redis" soapui-version="5.7.2" abortOnError="false" runType="SEQUENTIAL" resourceRoot="" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.LoadTestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="fae6782d-40a4-4288-8f89-568c83a7e26a" activeEnvironment="Default" name="redis" soapui-version="5.9.1" abortOnError="false" runType="SEQUENTIAL" resourceRoot="" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.LoadTestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
   <con:entry key="Print Report Statistics" value="false"/>
   <con:entry key="Report Format(s)" value=""/>
   <con:entry key="Host:Port" value=""/>
